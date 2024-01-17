@@ -1,0 +1,27 @@
+---
+- name: gui
+  hosts: local
+  tasks:
+    - name: Configure Text Scaling in Gnome
+      dconf:
+        key: "/org/gnome/desktop/interface/text-scaling-factor"
+        value: "0.9375"
+        state: present
+
+    - name: Configure GTK Theme in Gnome
+      dconf:
+        key: "/org/gnome/desktop/interface/gtk-theme"
+        value: "'Dracula'"
+        state: present
+
+    - name: Configure Icon Theme in Gnome
+      dconf:
+        key: "/org/gnome/desktop/interface/icon-theme"
+        value: "'Vimix-Amethyst-dark'"
+        state: present
+
+    - name: Configure Cursor Theme in Gnome
+      dconf:
+        key: "/org/gnome/desktop/interface/cursor-theme"
+        value: "'Vimix-white-cursors'"
+        state: present
