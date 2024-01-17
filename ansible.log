@@ -1,0 +1,8 @@
+2024-01-17 06:21:37,320 p=542860 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:21:39,061 p=542860 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:21:41,783 p=542860 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:21:50,260 p=542969 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
