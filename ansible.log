@@ -6,3 +6,37 @@
 2024-01-17 06:21:50,260 p=542969 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
 1, found a duplicate dict key (skip_list). Using last defined value only.
 
+2024-01-17 06:21:53,569 p=543006 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:21:54,911 p=543006 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:21:56,643 p=543006 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:21:58,542 p=543058 u=abi n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2024-01-17 06:21:58,546 p=543058 u=abi n=ansible | playbook: main.yml
+2024-01-17 06:21:58,772 p=543071 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:21:59,654 p=543087 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:01,030 p=543094 u=abi n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-01-17 06:22:04,416 p=543102 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:05,865 p=543102 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
