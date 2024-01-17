@@ -1,6 +1,9 @@
 # code: language=yaml
 # vim:ft=yaml:
+# Ansible Lint Settings
+# https://ansible-lint.readthedocs.io/configuring/#configuration-file
 ---
+# use_default_rules: true
 # parseable: true
 # quiet: true
 # verbosity: 1
@@ -10,26 +13,28 @@ loop_var_prefix: "{role}_"
 
 # This makes linter to fully ignore rules/tags listed below
 skip_list:
+  - command-instead-of-shell
   - document-start
+  - fqcn
   - fqcn-builtins
   - fqcn[action-core]
   - git-latest
   - latest[git]
+  - loop-var-prefix[missing,wrong]
   - meta-no-info
+  - name[casing]
+  - name[missing]
+  - name[play]
+  - yaml[new-line-at-end-of-file]
+  - no-changed-when
   - no-free-form
   - package-latest
   - risky-file-permissions
-  - name[missing]
-  - name[play]
-  - no-changed-when
-  - yaml[truthy]
-  - schema[meta]
   - role-name # Role name {} does not match ``^[a-z][a-z0-9_]+$`` pattern
-  - fqcn
+  - schema[meta]
   - yaml[line-length]
   - yaml[octal-values]
-  - command-instead-of-shell
-  - loop-var-prefix[missing,wrong]
+  - yaml[truthy]
 
 # This makes the linter display but not fail for rules/tags listed below:
 warn_list:
