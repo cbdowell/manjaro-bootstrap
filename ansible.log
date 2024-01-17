@@ -40,3 +40,40 @@
 1, found a duplicate dict key (skip_list). Using last defined value only.
 
 2024-01-17 06:22:05,865 p=543102 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:22:07,853 p=543102 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:22:08,277 p=543151 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:09,028 p=543163 u=abi n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2024-01-17 06:22:09,032 p=543163 u=abi n=ansible | playbook: main.yml
+2024-01-17 06:22:11,283 p=543193 u=abi n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2024-01-17 06:22:14,582 p=543205 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:16,514 p=543205 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:22:16,935 p=543229 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:17,764 p=543241 u=abi n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 12, column
+1, found a duplicate dict key (skip_list). Using last defined value only.
+
+2024-01-17 06:22:18,649 p=543205 u=abi n=ansible_compat.runtime | Skipped installing collection dependencies due to running in offline mode.
+2024-01-17 06:22:19,527 p=543261 u=abi n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2024-01-17 06:22:19,528 p=543261 u=abi n=ansible | playbook: main.yml

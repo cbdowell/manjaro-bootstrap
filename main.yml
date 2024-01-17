@@ -18,4 +18,3 @@
       ansible.builtin.debug:
         msg: "{{ ansible_devices[item].size }}"
       loop: "{{ ansible_devices.keys() | map('regex_search', 'sd.*') | select('string') | list }}"
-
