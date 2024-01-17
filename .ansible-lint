@@ -1,0 +1,43 @@
+# code: language=yaml
+# vim:ft=yaml:
+---
+# parseable: true
+# quiet: true
+# verbosity: 1
+
+# Enable checking of loop variable prefixes in roles
+loop_var_prefix: "{role}_"
+
+# This makes linter to fully ignore rules/tags listed below
+skip_list:
+  - document-start
+  - fqcn-builtins
+  - fqcn[action-core]
+  - git-latest
+  - latest[git]
+  - meta-no-info
+  - no-free-form
+  - package-latest
+  - risky-file-permissions
+  - name[missing]
+  - name[play]
+  - no-changed-when
+  - yaml[truthy]
+  - schema[meta]
+  - role-name # Role name {} does not match ``^[a-z][a-z0-9_]+$`` pattern
+  - fqcn
+  - yaml[line-length]
+  - yaml[octal-values]
+  - command-instead-of-shell
+  - loop-var-prefix[missing,wrong]
+
+# This makes the linter display but not fail for rules/tags listed below:
+warn_list:
+  - skip_this_tag
+  - git-latest
+  - experimetal # experimental is included in the implicit list
+
+skip_list:
+  - role-name # Role name {} does not match ``^[a-z][a-z0-9_]+$`` pattern
+  - fqcn[action-core]
+  - name[missing]
