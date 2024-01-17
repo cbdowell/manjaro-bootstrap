@@ -1,0 +1,11 @@
+file system                               |mount point     |type  |options                                                |dump |pass
+UUID=3A28-A8BD                            |/boot/efi       |vfat  |umask=0077                                             |   0 |   2
+UUID=624316d5-3766-491f-a038-19d0f2515beb |/               |ext4  |defaults,noatime                                       |   0 |   1
+tmpfs                                     |/tmp            |tmpfs |defaults,noatime,mode=1777                             |   0 |   0
+/dev/data/containers                      |/mnt/containers |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=containers |   0 |   0
+/dev/data/home                            |/mnt/home       |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=home       |   0 |   0
+/dev/data/packages                        |/mnt/packages   |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=packages   |   0 |   0
+/dev/data/repos                           |/mnt/repos      |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=repos      |   0 |   0
+/dev/data/restore                         |/mnt/restore    |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=restore    |   0 |   0
+/dev/data/backups                         |/mnt/backups    |auto  |nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=backups    |   0 |   0
+/dev/mynew_vg/vol01                       |/foobar         |ext4  |defaults                                               |   0 |   2
