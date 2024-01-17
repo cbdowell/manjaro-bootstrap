@@ -1,0 +1,51 @@
+# code: language=ansible
+---
+- name: create_fs | unmounting filesystem(s)
+  ansible.posix.mount:
+    path: "{{ lv.mntp }}"
+    src: "/dev/{{ vg.vgname }}/{{ lv.lvname }}"
+    fstype: "{{ lv.filesystem | default(omit) }}"
+    state: absent  
+  become: true
+  when:
+    - lv is defined
+    - lv != 'None'
+    - lv.create is defined
+    - not lv.create|bool
+    - lv.filesystem != "swap"
+
+- name: create_fs | creating new filesystem on new LVM logical volume(s)
+  community.general.filesystem:
+    fstype: "{{ lv.filesystem }}"
+    dev: "/dev/{{ vg.vgname }}/{{ lv.lvname }}"
+    resizefs: yes
+  become: true
+  when:
+    - vg.create is defined
+    - vg.create|bool
+    - lv is defined
+    - lv != 'None'
+    - lv.create is defined
+    - lv.create|bool
+    - lv.filesystem is defined
+    - lv.filesystem != 'None'
+    - lv.filesystem != 'swap'
+    - lv.filesystem != 'xfs'
+
+- name: create_fs | mounting new filesystem(s)
+  ansible.posix.mount:
+    path: "{{ lv.mntp }}"
+    src: "/dev/{{ vg.vgname }}/{{ lv.lvname }}"
+    fstype: "{{ lv.filesystem }}"
+    state: mounted
+    opts: "{{ lv.mopts | default('defaults') }}"
+  become: true
+  when:
+    - vg.create is defined
+    - vg.create|bool
+    - lv is defined
+    - lv != 'None'
+    - lv.create is defined
+    - lv.create|bool
+    - lv.mount is defined
+    - lv.mount|bool

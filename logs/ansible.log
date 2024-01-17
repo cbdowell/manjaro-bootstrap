@@ -1,0 +1,95 @@
+2023-12-17 08:12:57,041 p=131285 u=zeus n=ansible | PLAY [Import Bootstrap Playbook] ***********************************************
+2023-12-17 08:12:57,053 p=131285 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:12:58,477 p=131285 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:12:58,502 p=131285 u=zeus n=ansible | TASK [debug statement] *********************************************************
+2023-12-17 08:12:58,525 p=131285 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello bootstrap"
+}
+2023-12-17 08:12:58,557 p=131285 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:12:58,558 p=131285 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:13:18,861 p=131426 u=zeus n=ansible | PLAY [Import Bootstrap Playbook] ***********************************************
+2023-12-17 08:13:18,871 p=131426 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:13:20,300 p=131426 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:13:20,328 p=131426 u=zeus n=ansible | TASK [debug statement] *********************************************************
+2023-12-17 08:13:20,349 p=131426 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello bootstrap"
+}
+2023-12-17 08:13:20,380 p=131426 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:13:20,380 p=131426 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:17:49,263 p=132046 u=zeus n=ansible | PLAY [Bootstrap Playbook] ************************************************************
+2023-12-17 08:17:49,273 p=132046 u=zeus n=ansible | TASK [Gathering Facts] ***************************************************************
+2023-12-17 08:17:50,671 p=132046 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:17:50,698 p=132046 u=zeus n=ansible | TASK [debug statement] ***************************************************************
+2023-12-17 08:17:50,720 p=132046 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello bootstrap"
+}
+2023-12-17 08:17:50,751 p=132046 u=zeus n=ansible | PLAY RECAP ***************************************************************************
+2023-12-17 08:17:50,751 p=132046 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:24:09,185 p=132477 u=zeus n=ansible | ERROR! the role 'Include Bootstrap Role' was not found in /home/zeus/.bootstrap/roles/bootstrap/roles:/home/zeus/.bootstrap/roles:/home/zeus/.bootstrap/roles/bootstrap
+
+The error appears to be in '/home/zeus/.bootstrap/roles/bootstrap/main.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - name: Include Bootstrap Role
+      ^ here
+
+2023-12-17 08:24:46,159 p=132627 u=zeus n=ansible | ERROR! role definitions must contain a role name
+
+The error appears to be in '/home/zeus/.bootstrap/roles/bootstrap/main.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - include_role:
+      ^ here
+
+2023-12-17 08:25:04,811 p=132666 u=zeus n=ansible | PLAY [Bootstrap Playbook] ******************************************************
+2023-12-17 08:25:04,821 p=132666 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:25:06,255 p=132666 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:25:06,280 p=132666 u=zeus n=ansible | TASK [bootstrap : debug statement] *********************************************
+2023-12-17 08:25:06,301 p=132666 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello bootstrap role..."
+}
+2023-12-17 08:25:06,340 p=132666 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:25:06,341 p=132666 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:26:46,402 p=132848 u=zeus n=ansible | PLAY [Bootstrap Playbook] ******************************************************
+2023-12-17 08:26:46,413 p=132848 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:26:47,850 p=132848 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:26:47,877 p=132848 u=zeus n=ansible | TASK [home : debug statement] **************************************************
+2023-12-17 08:26:47,901 p=132848 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello home role..."
+}
+2023-12-17 08:26:47,943 p=132848 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:26:47,944 p=132848 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:26:57,182 p=132997 u=zeus n=ansible | ERROR! the playbook: main.yml could not be found
+2023-12-17 08:27:06,709 p=133035 u=zeus n=ansible | PLAY [Bootstrap Playbook] ******************************************************
+2023-12-17 08:27:06,719 p=133035 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:27:09,178 p=133035 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:27:09,205 p=133035 u=zeus n=ansible | TASK [home : debug statement] **************************************************
+2023-12-17 08:27:09,229 p=133035 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello home role..."
+}
+2023-12-17 08:27:09,269 p=133035 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:27:09,270 p=133035 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:32:04,517 p=133701 u=zeus n=ansible | PLAY [Bootstrap Playbook] ******************************************************
+2023-12-17 08:32:04,528 p=133701 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:32:05,993 p=133701 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:32:06,019 p=133701 u=zeus n=ansible | TASK [home : debug statement] **************************************************
+2023-12-17 08:32:06,050 p=133701 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello home role..."
+}
+2023-12-17 08:32:06,097 p=133701 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:32:06,097 p=133701 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-12-17 08:33:33,324 p=133890 u=zeus n=ansible | PLAY [Bootstrap Playbook] ******************************************************
+2023-12-17 08:33:33,335 p=133890 u=zeus n=ansible | TASK [Gathering Facts] *********************************************************
+2023-12-17 08:33:34,811 p=133890 u=zeus n=ansible | ok: [localhost]
+2023-12-17 08:33:34,837 p=133890 u=zeus n=ansible | TASK [home : debug statement] **************************************************
+2023-12-17 08:33:34,866 p=133890 u=zeus n=ansible | ok: [localhost] => {
+    "msg": "hello maximus"
+}
+2023-12-17 08:33:34,906 p=133890 u=zeus n=ansible | PLAY RECAP *********************************************************************
+2023-12-17 08:33:34,907 p=133890 u=zeus n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,68 @@
+# code: language=ansible
+---
+- name: LVM Testing
+  hosts: local
+  become: true
+  gather_facts: false
+  vars:
+    lvm_groups:
+      - vgname: depot
+        disks:
+          - /dev/sda
+        create: true
+        lvnames:
+          - lvname: repos
+            size: 10g
+            create: true
+            filesystem: ext4
+            mount: true
+            mntp: /opt/repos
+    manage_lvm: true
+
+  # tasks:
+  #   - name: Partition /dev/sdb disk
+  #     community.general.parted:
+  #       device: /dev/sdb
+  #       number: 1
+  #       flags: [lvm]
+  #       state: present
+  #       part_end: 5GiB
+
+  #   - name: Task for PV and VG
+  #     community.general.lvg:
+  #       vg: depot
+  #       pvs: /dev/sdb1
+  #       pesize: 8
+
+  #   # - name: Task for PV and VG
+  #   #   community.general.lvg:
+  #   #     vg: depot
+  #   #     pvs: /dev/sdb1, /dev/sdb2, /dev/sdb3
+  #   #     pesize: 8
+
+  #   - name: Logical volume with 1GB size
+  #     community.general.lvol:
+  #       vg: depot
+  #       lv: repos
+  #       size: 1G
+
+  #   - name: Format the volume with ext4 fs
+  #     community.general.filesystem:
+  #       fstype: ext4
+  #       dev: /dev/depot/repos
+
+  #   - name: Target directory under /opt/
+  #     ansible.builtin.file:
+  #       path: /opt/repos/
+  #       state: directory
+  #       mode: '0755'
+
+  #   - name: mount the lv on /data1
+  #     ansible.posix.mount:
+  #       path: /opt/repos/
+  #       src: /dev/depot/repos
+  #       fstype: ext4
+  #       state: mounted
+
+  roles:
+    - lvm

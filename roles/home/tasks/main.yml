@@ -1,0 +1,5 @@
+# code: language=ansible
+---
+- name: debug statement
+  debug:
+    msg: hello {{ user.name }}

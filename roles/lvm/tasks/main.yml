@@ -1,0 +1,7 @@
+# code: language=ansible
+---
+- name: Manage LVM
+  ansible.builtin.include_tasks: manage_lvm.yml
+  when:
+    - lvm_groups is defined
+    - manage_lvm|bool
